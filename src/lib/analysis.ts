@@ -150,7 +150,7 @@ export async function analyzeContract(
  * 5. Answers may paraphrase but must be traceable to document text
  *
  * Why it matters: Groundedness builds trust. Users must be able to verify answers against
- * the contract. If Redline makes up an answer, credibility is destroyed.
+ * the contract. If ReviewIt makes up an answer, credibility is destroyed.
  *
  * See also: ADR 0001 "Citation Integrity" (docs/adr/0001-citation-integrity.md)
  *

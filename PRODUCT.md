@@ -34,7 +34,7 @@ product's core bet (red lines + library) is a repeat-use bet.
 
 ## Product Purpose
 
-Redline reads an inbound contract before the signer signs it and answers
+ReviewIt reads an inbound contract before the signer signs it and answers
 "should I sign this, and what do I push back on?" It returns, on one screen: a
 plain-English summary; the clauses that work against the signer, ranked
 Blocker/Push/Note, each anchored to the exact source sentence; drafted
@@ -50,7 +50,7 @@ Every incumbent in this space — enterprise tools (Spellbook, LegalOn,
 LawGeex) and consumer tools alike (Detangle.ai, DoNotPay, raw ChatGPT/Claude)
 — shares the same unsolved failure: accuracy. Nobody has solved "trust the
 output without a lawyer checking it," and DoNotPay drew an FTC penalty for
-overclaiming. Redline's wedge is that every claim it makes points at a
+overclaiming. ReviewIt's wedge is that every claim it makes points at a
 verbatim sentence the signer can read themselves, and its Q&A refuses to
 answer anything the document doesn't cover. That is the one thing the free
 default (ChatGPT/Claude) and the cheap incumbent (Detangle.ai) both get wrong,
@@ -109,10 +109,13 @@ reviews carry forward.
 
 ## Brand Commitments
 
-Name: **Redline**. Domain vocabulary is binding (`CONTEXT.md`): say "signer,"
+Name: **ReviewIt** (renamed from Redline, 2026-09). Tagline: "Easy, immediate
+contract review." Domain vocabulary is binding (`CONTEXT.md`): say "signer,"
 "flag," "red line," "counter-offer" — avoid "customer," "reviewer," "issue,"
-"finding," "warning," and never use "redline" or "red line" as a verb. No
-logo, tagline, or other visual assets exist yet.
+"finding," "warning," and never use "redline" or "red line" as a verb. Logo:
+a navy rounded-square mark with a two-tone (accent-red / white) checkmark,
+paired with a system-sans "ReviewIt" wordmark — see `src/components/Logo.tsx`
+and `DESIGN.md`.
 
 ## Evidence on Hand
 
@@ -138,11 +141,11 @@ fabricate them. No fixture contracts or eval results exist yet either
 3. **The signer's own red lines outrank market norms.** Something the signer
    has declared a non-negotiable is flagged even when it's completely
    standard, and the product says which reason applied.
-4. **Redline is a repeat-use product, not a one-off report.** The red-lines
+4. **ReviewIt is a repeat-use product, not a one-off report.** The red-lines
    list and library only pay off with return visits (ADR 0002) — onboarding
    exists to get a signer to one real, useful review fast, not to a one-time
    analysis.
-5. **State what the clause says; label what Redline thinks.** The factual
+5. **State what the clause says; label what ReviewIt thinks.** The factual
    quote is never hedged; every judgment — severity, "broader than typical" —
    carries an explicit confidence marker, including a real "unclear, get a
    human to look" state.

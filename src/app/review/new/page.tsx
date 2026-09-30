@@ -169,7 +169,7 @@ export default function NewReview() {
         <header className={styles.header}>
           <h1 className={styles.title}>Paste your contract</h1>
           <p className={styles.description}>
-            Paste the full contract text. Redline reads only what you give it.
+            Paste the full contract text. ReviewIt reads only what you give it.
           </p>
         </header>
 
@@ -194,7 +194,7 @@ export default function NewReview() {
               Red lines (non-negotiables) — optional
             </label>
             <p className={styles.description} style={{ fontSize: '13px', marginBottom: '8px' }}>
-              Add phrases from this contract that you won&apos;t accept. Redline will flag any clause that crosses these lines.
+              Add phrases from this contract that you won&apos;t accept. ReviewIt will flag any clause that crosses these lines.
             </p>
             <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
               <input
@@ -266,7 +266,7 @@ export default function NewReview() {
           )}
 
           <div className={styles.notice}>
-            <strong>What Redline sees:</strong> Only the text you paste — no
+            <strong>What ReviewIt sees:</strong> Only the text you paste — no
             attachments, images, or linked documents. If your contract
             references schedules or exhibits, include those too.
           </div>

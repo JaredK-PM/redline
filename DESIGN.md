@@ -1,24 +1,35 @@
 ---
-name: Redline
-description: A boarding pass paired with a live airport departure board — contract flags rerank by urgency, not by decoration.
+name: ReviewIt
+description: A lawyerly professional light system — navy authority, off-white paper ground, and one flagged-clause visual grammar shared by the landing demo and the real result screen.
 colors:
-  terminal-night: "#0f1115"
-  terminal-night-raised: "#171a1f"
-  split-flap-cream: "#f5f2ea"
-  split-flap-cream-dimmed: "#f5f2ea99"
-  worn-card-stock: "#b0aa98"
-  housing-seam: "#2b2f36"
-  gate-change-red: "#d94f30"
-  alert-ink: "#2a0d06"
-  delayed-amber: "#c8862b"
-  focus-gold: "#e8c14d"
-  hover-wash: "#ffffff10"
+  legal-navy: "#1a2d4d"
+  legal-navy-light: "#2d4a7a"
+  legal-white: "#ffffff"
+  legal-off-white: "#f8f7f5"
+  legal-gray: "#5a5a5a"
+  legal-gray-light: "#a8a8a8"
+  legal-gray-border: "#d4d4d4"
+  legal-accent-red: "#b8232b"
+  legal-accent-gold: "#9b7d47"
+  legal-warning-amber: "#d97a2d"
 typography:
+  display:
+    fontFamily: "-apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
+    fontSize: "40px"
+    fontWeight: 700
+    lineHeight: 1.15
+    letterSpacing: "-0.02em"
   headline:
     fontFamily: "-apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
     fontSize: "28px"
     fontWeight: 600
     lineHeight: 1.2
+    letterSpacing: "-0.01em"
+  sectionTitle:
+    fontFamily: "-apple-system, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif"
+    fontSize: "26px"
+    fontWeight: 700
+    lineHeight: 1.25
     letterSpacing: "-0.01em"
   title:
     fontFamily: "\"JetBrains Mono\", ui-monospace, \"SF Mono\", Menlo, Consolas, monospace"
@@ -52,7 +63,7 @@ typography:
     lineHeight: 1.3
     letterSpacing: "0.01em"
 rounded:
-  sharp: "2px"
+  sharp: "3px"
 spacing:
   xs: "4px"
   sm: "8px"
@@ -62,165 +73,251 @@ spacing:
   xxl: "44px"
 components:
   button-primary:
-    backgroundColor: "transparent"
-    textColor: "{colors.split-flap-cream}"
+    backgroundColor: "{colors.legal-navy}"
+    textColor: "{colors.legal-white}"
     typography: "{typography.body}"
     rounded: "{rounded.sharp}"
-    padding: "0 18px"
+    padding: "13px 26px"
   button-primary-hover:
-    backgroundColor: "transparent"
-    textColor: "{colors.split-flap-cream}"
+    backgroundColor: "{colors.legal-navy-light}"
+    textColor: "{colors.legal-white}"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.split-flap-cream}"
+    textColor: "{colors.legal-navy}"
     typography: "{typography.body}"
     rounded: "{rounded.sharp}"
     padding: "8px 14px"
   button-ghost-hover:
-    backgroundColor: "{colors.hover-wash}"
-    textColor: "{colors.split-flap-cream}"
-  button-ghost-active:
-    backgroundColor: "transparent"
-    textColor: "{colors.delayed-amber}"
-  tab-toggle:
-    backgroundColor: "transparent"
-    textColor: "{colors.worn-card-stock}"
-    typography: "{typography.body}"
-    padding: "10px 4px"
-  tab-toggle-active:
-    backgroundColor: "transparent"
-    textColor: "{colors.split-flap-cream}"
+    backgroundColor: "{colors.legal-off-white}"
+    textColor: "{colors.legal-navy}"
   input-field:
-    backgroundColor: "{colors.terminal-night-raised}"
-    textColor: "{colors.split-flap-cream}"
+    backgroundColor: "{colors.legal-off-white}"
+    textColor: "{colors.legal-gray}"
     typography: "{typography.body}"
     rounded: "{rounded.sharp}"
     padding: "12px 14px"
 ---
 
-# Design System: Redline
+# Design System: ReviewIt
 
 ## Overview
 
-**Creative North Star: "The Gate Board"**
+**Creative North Star: "The Signed Original"**
 
-Redline's result screen is a boarding pass paired with a live airport departure board. It does not read as a SaaS dashboard reviewing a document — it reads as an operations surface tracking risk the way a terminal tracks flights: ranked, positional, and willing to interrupt its own calm only when something actually changes state. The system explicitly refuses the "friendly legal-AI SaaS dashboard" canon it was built against: no soft neutral ground, no brand-blue accent, no chat-bubble Q&A, no rounded card grid. Instead: a near-black ground, warm cream ink, mechanical monospace for anything that is data, and a single reserved alert color that only exists as a flash, never as a resting badge.
+ReviewIt reads as a well-run small law office's own intake system, not a
+consumer AI toy. A white paper ground, navy authority color, and warm
+off-white panels carry the whole system — the same restraint a real firm
+uses on its own letterhead and engagement documents. Nothing here performs
+"AI product": no dark terminal chrome, no neon accent, no glowing gradient,
+no chat-bubble Q&A. The system trusts plain hierarchy, generous whitespace,
+and one severity vocabulary (Blocker / Push / Note) to do the organizing
+work that color-coded pills or icon badges would do in a louder system.
 
-Density is high but legible — a fixed-column board with tight row rhythm, tabular figures, and uppercase micro-labels doing the organizing work that color-coded pills or icon badges would do in the declined world. The one authored motion moment (rows scrambling into severity order on load, then settling) is the system's single indulgence; everything else is instant or near-instant state change.
+This replaced an earlier "Gate Board" dark-terminal direction (near-black
+ground, cream ink, airport-departure-board metaphor) that was explicitly
+abandoned in favor of this lawyerly light system — see `CLAUDE.md`'s
+"Never revert to dark terminal theme" rule. The dark direction is retired,
+not paused; nothing in this document should be read as a return path to it.
 
 **Key Characteristics:**
-- Near-black terminal ground with warm cream ink — never a light theme, never a blue accent
-- Two-voice type system: mechanical monospace for data/board content, plain system-UI sans for prose
-- Flat by default — zero shadows; depth comes from background-color steps and 1px rule dividers
-- One reserved alert color that fires only on state change, never as a static severity badge
-- Near-square corners (2px) everywhere; bordered rectangles instead of soft app chrome
+- White page ground with off-white (`#f8f7f5`) panel surfaces — never a dark
+  or near-black ground anywhere in the product.
+- Navy (`#1a2d4d`) is the single authority color: primary buttons, links,
+  headings, the logo mark, the final-CTA band. No blue-adjacent competitor
+  accent exists in the palette.
+- Two-voice type system carried over from the original system: JetBrains
+  Mono for anything that is data the signer scans (severity labels, clause
+  names, board-head columns); the system sans stack for prose the signer
+  reads for meaning.
+- Flat by default — zero shadows anywhere. Depth comes from a single
+  background-color step (white → off-white) and 1px gray-border dividers.
+- Sharp corners (3px) throughout; bordered rectangles, not soft app chrome.
+- Severity color vocabulary: accent-red for Blocker, warning-amber for Push,
+  gray-light for Note — applied only to the severity label text, never to
+  row backgrounds or borders at rest.
 
 ## Colors
 
-The palette is a near-black terminal ground against warm cream ink, with two severity accents that are used sparingly and by strict rule, not decoratively.
-
 ### Primary
-- **Terminal Night** (`#0f1115`): the page ground. Everything sits on this; there is no lighter "canvas" color anywhere in the system.
-- **Split-Flap Cream** (`#f5f2ea`): primary ink — headlines, active tab labels, quoted source sentences, board data.
+- **Legal Navy** (`#1a2d4d`): the one authority color — primary buttons,
+  the logo mark, headline text, the final-CTA band background, active nav
+  states.
+- **Legal White** (`#ffffff`): the page ground. Everything sits on this by
+  default.
 
 ### Secondary
-- **Gate Change Red** (`#d94f30`): the Blocker severity label color and the row-hold flash background. Fires only on a state-change flash (a newly-triggered or red-line-crossed row going from calm to `.held`), never as a static severity chip or resting badge — this is load-bearing, not a styling preference.
-- **Delayed Amber** (`#c8862b`): reserved for the Push severity label and the "sample"/live-indicator dot. Do not reuse Delayed Amber for anything outside Push severity or its dot; it would blur the one-color-per-severity-level rule.
+- **Legal Accent Red** (`#b8232b`): the Blocker severity label color, the
+  flagged-clause highlight border in the hero illustration, and the strike
+  stroke in the logo mark. Not used as a resting badge background.
+- **Legal Accent Gold** (`#9b7d47`): the hero tagline color and the Push
+  counter-offer / "what to do" accent in the demo panel.
+- **Legal Warning Amber** (`#d97a2d`): the Push severity label color and the
+  "copied" confirmation state on the counter-offer copy button.
 
 ### Neutral
-- **Terminal Night, Raised** (`#171a1f`): the one elevated surface tone — the boarding-pass ticket panel, blockquote source-sentence panel, and Q&A input field background. Never combined with a shadow.
-- **Split-Flap Cream, Dimmed** (`#f5f2ea99`, 60% alpha of Split-Flap Cream): secondary prose ink — sub-headlines, disclaimer emphasis, Q&A answer text. Used specifically where legibility can tolerate a step down from full-strength cream.
-- **Worn Card Stock** (`#b0aa98`): tertiary ink for field labels, "why" microcopy, quote previews, and placeholder text. This is a solid warm-tinted gray, not an alpha blend — it was deliberately fixed from an earlier low-contrast alpha value specifically to clear 4.5:1+ contrast against Terminal Night. Never substitute an alpha-blended cream here; the solid value is the accessibility fix.
-- **Housing Seam** (`#2b2f36`): the only border/divider color in the system — ticket dividers, row bottom-borders, board-head rule, input borders, dashed "also seen" border.
-- **Alert Ink** (`#2a0d06`): text color used only inside a `.held` row, where it sits directly on Gate Change Red.
-- **Hover Wash** (`#ffffff10`, a flat 10%-alpha white wash): the hover-state background for bordered interactive rows and buttons. Backs the ghost "Copy counter-offer" button and, as of the landing page, the flag row itself (`.row:hover`) — a second, independent component converging on the same value, which is why it is now a named token rather than a bare hex repeated in prose.
+- **Legal Off-White** (`#f8f7f5`): the one elevated surface tone — panel
+  backgrounds (flag board, form inputs, resource cards), never combined with
+  a shadow.
+- **Legal Gray** (`#5a5a5a`): primary body-copy ink.
+- **Legal Gray, Light** (`#a8a8a8`): field labels, placeholder text, Note
+  severity label, footnote/disclosure copy. Meets 4.5:1+ against white.
+- **Legal Gray Border** (`#d4d4d4`): the only border/divider color in the
+  system — panel borders, section dividers, input borders, nav bottom rule.
 
 ### Named Rules
-**The One Flash Rule.** Gate Change Red never appears as a resting UI color — not a badge, not a persistent label, not a border. It exists only as the `.held` state fired on a row that just crossed a red line or resolved to Blocker, and it clears itself (the comp holds for 1.8s). Any new component that wants "danger" as a permanent color is wrong for this system; permanent Blocker identity is carried by the Blocker label's own color and position, not by red.
-
-**The One Color Per Severity Rule.** Each severity level (Blocker, Push, Note) owns exactly one label color and weight, applied only to the severity label text — never blended into row backgrounds, borders, or icons at rest.
+**The One Color Per Severity Rule.** Each severity level (Blocker, Push,
+Note) owns exactly one label color, applied only to the severity label text
+— never blended into row backgrounds, borders, or icons at rest. Carried
+forward unchanged from the prior system because the underlying flag-row
+component is unchanged; only its ground and neutral tones moved from dark
+to light.
 
 ## Typography
 
-**Body Font:** system-UI sans stack (`-apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`)
-**Label/Mono Font:** JetBrains Mono (loaded via Google Fonts CDN), with `ui-monospace, "SF Mono", Menlo, Consolas, monospace` fallback
+**Body Font:** system-UI sans stack (`-apple-system, "Segoe UI", Roboto,
+Helvetica, Arial, sans-serif`)
+**Label/Mono Font:** JetBrains Mono (loaded via `next/font/google`), with
+`ui-monospace, "SF Mono", Menlo, Consolas, monospace` fallback.
 
-**Character:** A deliberate two-voice split, confirmed during the fix-review round: JetBrains Mono carries anything that reads as board/data — severity labels, clause names, board-head columns, the route field, the barcode reference code — while the system sans stack carries prose the signer actually reads for meaning (why-text, disclaimer, blockquote quotes, counter-offer text, Q&A transcript). This follows the "Operate surfaces are well served by workhorse UI faces" guidance directly: the sans layer is a confirmed choice, not a placeholder waiting for a display face.
+**Character:** the two-voice split survives from the original system:
+JetBrains Mono carries board/data content — severity labels, clause names,
+panel micro-labels — while the system sans stack carries prose the signer
+reads for meaning (why-text, quoted source sentences, counter-offer text,
+Q&A answers, benefit copy, footnotes).
 
 ### Hierarchy
-- **Headline** (600, 28px, line-height 1.2): the clean-verdict headline ("You're probably fine.") — the one moment the system allows a larger, confident prose statement.
-- **Title** (500, 22px, mono, line-height 1.3): the boarding-pass route field (`CA → DE`) — the single largest use of mono type on the page.
-- **Data** (500, 15px, mono, line-height 1.3): board row clause names.
-- **Body** (400, 14px, sans, line-height 1.6): counter-offer text, blockquote source sentences, Q&A answers, clean-verdict sub-line.
-- **Caption** (400, 13px, sans, line-height 1.5): secondary/dimmed supporting prose — a flag row's "why" explanation text and the page footnote/disclosure line. This value existed informally at 13px in the Result screen's `.why` and `.quote-preview` classes before it had a name; the landing page reused the identical value on its own flag row and footnote, which is the two-independent-surfaces signal that promotes it to a real step between Label (11px) and Body (14px) rather than leaving it as an undocumented one-off repeated in two places.
-- **Label** (600, 11px, mono, uppercase, letter-spacing 0.08em): board-head columns, field labels, detail-panel headers ("Exact source sentence," "Counter-offer"). This is the system's workhorse micro-label and appears more than any other type role.
+- **Display** (700, 40px, sans, line-height 1.15): the landing hero
+  headline only.
+- **Headline** (600, 28px, sans, line-height 1.2): page-level headings
+  outside the hero (Sign in, Resources, dashboard welcome).
+- **Section Title** (700, 26px, sans, line-height 1.25): landing-page
+  section headings ("How it works," "See it in action," "Why trust the
+  flags").
+- **Title** (500, 22px, mono, line-height 1.3): reserved for board/route-
+  style data displays if reintroduced; not currently in use on a shipped
+  screen.
+- **Data** (500, 15px, mono, line-height 1.3): flag-row clause names.
+- **Body** (400, 14px, sans, line-height 1.6): counter-offer text,
+  blockquote source sentences, Q&A answers, benefit/step copy.
+- **Caption** (400, 13px, sans, line-height 1.5): a flag row's "why" text,
+  the synthetic-contract footnote, resource-card copy.
+- **Label** (600, 11px, mono, uppercase, letter-spacing 0.08em): panel
+  micro-labels ("What the contract says," detail-panel headers, form field
+  labels).
 
 ### Named Rules
-**The Two-Voice Rule.** Mono is for data the signer scans (labels, severities, clause names, the route, the barcode code); sans is for prose the signer reads (why-text, quotes, answers, disclaimers). Never put a full sentence of prose in mono, and never label a data column in sans.
+**The Two-Voice Rule.** Mono is for data the signer scans (severity labels,
+clause names, panel micro-labels); sans is for prose the signer reads (why-
+text, quotes, answers, benefit copy). Never put a full sentence of prose in
+mono, and never label a data column in sans.
 
 ## Layout
 
-A single-column frame capped at 1180px, centered, with 28px side padding. The boarding-pass summary is a five-column grid (`1.4fr 1fr 1fr 1fr auto`, the last column the scan/barcode block) with 1px internal dividers between fields, at 20-22px padding per cell. Below it, the flag board is a fixed four-column grid (`84px 1fr 300px 40px`: severity / clause+why / quote preview / chevron) shared identically by the board-head row and every data row, so columns stay aligned as rows reorder. At the 860px breakpoint the ticket collapses to two columns (scan block spans full width) and the board drops its quote-preview column entirely (`84px 1fr 0px 32px`) rather than truncating it further.
-
-Row rhythm inside the board is 16px vertical padding per row with a 1px Housing Seam divider between rows and none inside the header. The expand/collapse detail panel, when open, adds a two-column inner grid (`1fr 1fr`, 28px gap) indented to align under the clause column (`padding-left:84px`), collapsing to one column on mobile.
+A single-column frame capped at 1180px, centered, with 28px side padding
+(16px on mobile ≤760px). The landing page composes as stacked full-width
+sections (hero, how-it-works, demo, trust, final-CTA band, footer), each
+its own 1180px-capped container except the final-CTA band, which is a
+full-bleed navy band with centered narrow content. The flag-row demo is a
+three-column grid (`84px severity / 1fr clause+why / 32px chevron`),
+identical in the landing-page teaser and the real result screen.
 
 ## Elevation & Depth
 
-Flat by default: zero `box-shadow` anywhere in the artifact. Depth is conveyed entirely through two background-color steps (Terminal Night for the page ground, Terminal Night, Raised for the ticket panel, blockquote panel, and Q&A input) and 1px Housing Seam rule dividers between regions. There is no ambient glow, no drop shadow on hover, and no elevated "card" anywhere in the system.
+Flat by default: zero `box-shadow` anywhere in the product. Depth is
+conveyed entirely through one background-color step (white → off-white)
+and 1px gray-border rule dividers between regions. There is no ambient
+glow, no drop shadow on hover, and no elevated "card" anywhere in the
+system.
 
 ### Named Rules
-**The Flat-By-Default Rule.** Surfaces never lift with a shadow, at rest or on interaction. Depth is background-step + rule-divider only. A component that reaches for `box-shadow` is not native to this world.
+**The Flat-By-Default Rule.** Surfaces never lift with a shadow, at rest or
+on interaction. Depth is background-step + rule-divider only.
 
 ## Shapes
 
-Near-square corners throughout: a single 2px radius (`--radius`) applied everywhere a radius is used — the ticket panel, tags, buttons, inputs, blockquote panel, the dashed "also seen" note. There are no pill-shaped buttons and no soft rounded cards anywhere. Borders are plain 1px solid Housing Seam lines (dashed for the "also seen" aside); there is no double-border or inset-shadow border treatment. Icons (the chevron, the barcode) are authored inline SVG, never a Unicode glyph or CSS gradient standing in for one.
+Sharp corners throughout: a single 3px radius (`--radius`) applied
+everywhere a radius is used — buttons, panels, inputs, the flag board, the
+logo mark's rounded-square badge. No pill-shaped buttons and no soft
+rounded cards anywhere. Borders are plain 1px solid gray-border lines.
+Icons and the logo mark are authored inline SVG, never a Unicode glyph or
+icon font.
 
 ### Named Rules
-**The Bordered Rectangle Rule.** Interactive containers (buttons, the Q&A input, tags) are bordered rectangles at 2px radius, not soft app chrome. If a new component wants a shadow or a larger radius to signal "clickable," use a 1px border and the 2px radius instead.
+**The Bordered Rectangle Rule.** Interactive containers (buttons, form
+inputs) are bordered rectangles at 3px radius, not soft app chrome.
 
-**The Authored-Mark Rule.** Anything that reads as an icon or a texture (the barcode, the chevron) is hand-authored inline SVG. No icon-font glyphs, no Unicode arrows/dots standing in for icons, and no CSS `repeating-gradient` standing in for authored texture — both were explicitly replaced during the fix round.
+**The Authored-Mark Rule.** The logo mark and every landing-page
+illustration (hero document, how-it-works step icons, trust-section
+icons) are hand-authored inline SVG in one consistent stroke weight, never
+an icon-font glyph, emoji, or CSS-gradient stand-in.
 
 ## Components
 
+### Navigation Header
+Sticky white header, 1px gray-border bottom rule, max-width 1180px inner
+container. Logo mark + wordmark on the left; primary text links plus one
+navy CTA button on the right. On mobile (≤760px), secondary text links
+collapse, leaving one primary link and the CTA button.
+
 ### Buttons
-- **Shape:** bordered rectangle, 2px radius (`--radius`), no pill shapes.
-- **Primary (Q&A "Ask" send button):** transparent background, 1px Worn Card Stock border, Split-Flap Cream text, `0 18px` padding, no fixed height. Disabled state drops to Housing Seam border at 0.4 opacity.
-- **Hover / Focus:** border brightens to Split-Flap Cream on hover; `:focus-visible` gets a 2px Focus Gold (`#e8c14d`) outline with 2px offset, system-wide (not button-specific).
-- **Ghost (Copy counter-offer):** transparent background, 1px Housing Seam border, Split-Flap Cream text, 13px, `8px 14px` padding. Hover adds the Hover Wash token (`#ffffff10`, a flat 10%-alpha white) and brightens the border to Worn Card Stock. A successful copy switches border and text color to Delayed Amber with the label swapped to "Copied" for 1.6s — this is the one place Delayed Amber is used outside severity. The same Hover Wash token now also backs the landing page's flag row hover (`.row:hover`), confirming it as a shared interactive-hover treatment rather than a button-only value.
+- **Shape:** bordered rectangle, 3px radius, no pill shapes.
+- **Primary (nav CTA, hero CTA, final-CTA band, form submit):** solid navy
+  background, navy border, white text, `12-13px` vertical / `18-26px`
+  horizontal padding. Hover: `legal-navy-light`.
+- **Ghost (Copy counter-offer, sign-out, clear):** transparent background,
+  1px gray-border, navy text. Hover: off-white background, navy border.
+  A successful copy switches border/text color to warning-amber with the
+  label swapped to "Copied" for 1.6s.
 
-### Tabs (Flagged / Clean toggle)
-- **Style:** flat text tabs on a shared 1px Housing Seam bottom rule, no pill or boxed background.
-- **State:** inactive tabs are Worn Card Stock text with a transparent 2px bottom border; the active tab is full Split-Flap Cream text with a Split-Flap Cream 2px bottom border. Hover on inactive dims toward Split-Flap Cream, Dimmed.
-
-### Cards / Containers (boarding-pass ticket, blockquote panel)
-- **Corner Style:** 2px radius.
-- **Background:** Terminal Night, Raised.
+### Cards / Panels (flag board, form inputs, resource cards)
+- **Corner Style:** 3px radius.
+- **Background:** Legal Off-White.
 - **Shadow Strategy:** none — see Elevation & Depth.
-- **Border:** 1px Housing Seam around the ticket only; the blockquote panel is borderless, distinguished purely by its background step.
-- **Internal Padding:** 20-22px (ticket cells), 14-16px (blockquote).
+- **Border:** 1px Legal Gray Border.
 
 ### Inputs / Fields
-- **Style:** Terminal Night, Raised background, 1px Housing Seam border, 2px radius, Split-Flap Cream text, Worn Card Stock placeholder.
-- **Focus:** relies on the system-wide `:focus-visible` Focus Gold outline; no separate glow or border-color focus treatment.
-- **Disabled:** 0.6 opacity, no other visual change.
+- **Style:** Legal Off-White background, 1px Legal Gray Border, 3px
+  radius, Legal Gray text, Legal Gray Light placeholder.
+- **Focus:** border switches to Legal Navy, background switches to white.
+- **Disabled:** Legal Gray Border background, 0.6 opacity.
 
-### The Gate Board (signature component)
-The severity-ranked, reordering flag board is the system's signature piece. Rows render in DOM/severity order (Blocker pinned to top) and settle into that order via a FLIP animation on load — measuring a randomized scramble start position, then transitioning `transform` back to rest over 0.9s with a per-row 55ms stagger, cubic-bezier(0.16,1,0.3,1). Once settled, any row flagged as newly-triggered or red-line-crossed (`data-hold="true"`) flashes into the `.held` state (Gate Change Red background, Alert Ink text) for 1.8s before clearing. Each row expands in place via `grid-template-rows: 0fr → 1fr` on the `.detail` wrapper (not `max-height`) so the transition animates a layout-safe property instead of triggering reflow on an unbounded content height — this was a deliberate fix, not an incidental choice, and should be the default technique for any future expand/collapse panel in this system.
+### The Flag Row (signature component)
+Unchanged in behavior from the original system: severity label (mono,
+color-coded), clause name + "why" text, chevron toggle. Expands in place
+via `grid-template-rows: 0fr → 1fr` on the detail wrapper (not
+`max-height`), revealing the exact source sentence (blockquote) and a
+drafted counter-offer with a copy button. This is the one component shared
+verbatim between the landing-page demo and the real analysis result
+screen — it is the product's core trust mechanism made visible.
+
+### Logo Mark
+A 3px-radius navy square containing a two-tone checkmark: a short
+accent-red stroke meeting a longer white stroke at the same vertex,
+reading as "flagged, then cleared" in one continuous mark. Authored as
+inline SVG at `src/components/Logo.tsx`; never a raster export.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** use JetBrains Mono for anything that is board/data content (severities, clause names, column labels, the route, the barcode code) and the system sans stack for anything that is prose the signer reads for meaning.
-- **Do** use the `grid-template-rows: 0fr → 1fr` technique for any new expand/collapse panel, not `max-height`.
-- **Do** keep Gate Change Red exclusive to the state-change flash; a severity label's resting color and a state-change flash are two different jobs and use different tokens.
-- **Do** author icons and texture as inline SVG.
+- **Do** use JetBrains Mono for severity labels, clause names, and panel
+  micro-labels; system sans for everything the signer reads for meaning.
+- **Do** use the `grid-template-rows: 0fr → 1fr` technique for any new
+  expand/collapse panel, not `max-height`.
+- **Do** author icons, the hero illustration, and the logo as inline SVG.
+- **Do** keep the flag-row component identical between the landing-page
+  demo and the real result screen — divergence there would undercut the
+  citation-integrity story the whole product is built on.
 
 ### Don't:
-- **Don't** add a box-shadow anywhere in this system — depth is background-step and rule-divider only.
-- **Don't** use a pill-shaped button, a soft-shadow card, or a radius larger than 2px — near-square corners and bordered rectangles are the whole form language.
-- **Don't** reuse Gate Change Red as a static severity badge, border, or icon color; it is a flash, not a palette color available for general "danger" use.
-- **Don't** use a Unicode glyph or a CSS repeating-gradient as a stand-in icon or texture — both were explicitly replaced with authored inline SVG during the fix round; treat any reappearance as a regression, not a shortcut.
-- **Don't** generalize the board's settle-on-load FLIP animation into a repeating or looping effect, and don't soften or remove it — it is the system's one authored motion moment, confirmed as sufficient at ship.
-- **Don't** ship the chat-bubble Q&A pattern or a rounded neutral-background card grid — both were explicitly declined directions for this world, not unexplored options.
-- **Don't** treat the CDN-loaded JetBrains Mono or the missing split-flap character-flip / perforation ornament as bugs to silently fix in a future pass without flagging them — they are recorded open follow-ups from the finish review (font should be self-hosted if this world carries into the real Next.js app; the flip/perforation texture was judged unnecessary at ship but was never built).
-</content>
+- **Don't** reintroduce the dark terminal ground, cream ink, or airport-
+  board metaphor — that direction is retired per `CLAUDE.md`.
+- **Don't** add a box-shadow anywhere in this system.
+- **Don't** use a pill-shaped button, a soft-shadow card, or a radius
+  larger than 3px.
+- **Don't** use more than one severity color as a resting badge, border,
+  or icon color; Blocker/Push/Note each own exactly one label color.
+- **Don't** use a Unicode glyph, emoji, or CSS gradient as a stand-in icon
+  — the logo, step icons, and hero illustration are all authored SVG.
+- **Don't** fall into the same-size icon+heading+text card grid for
+  benefit/differentiator sections — the trust section uses a flowing
+  divided list, not boxed cards, deliberately.

@@ -57,6 +57,11 @@ export default async function LoginPage({
             placeholder="At least 6 characters"
           />
         </div>
+        {mode === "login" && (
+          <Link href="/forgot-password" className={styles.forgotLink}>
+            Forgot password?
+          </Link>
+        )}
         <button className={styles.submit} type="submit">
           {mode === "signup" ? "Create account" : "Sign in"}
         </button>

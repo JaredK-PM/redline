@@ -143,7 +143,7 @@ Every sourceSentence MUST be a verbatim substring of the contract text. No parap
         'Content-Type': 'application/json',
         Authorization: `Bearer ${this.apiKey}`,
         'HTTP-Referer': 'https://redline.example.com',
-        'X-Title': 'Redline Contract Analyzer',
+        'X-Title': 'ReviewIt Contract Analyzer',
       },
       body: JSON.stringify({
         model: this.modelSlug,

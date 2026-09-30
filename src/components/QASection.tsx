@@ -46,7 +46,7 @@ export function QASection({ documentText: _, onAnswer }: QASectionProps) {
       <div className={styles.qaContainer}>
         <h2 className={styles.heading}>Questions about this contract?</h2>
         <p className={styles.description}>
-          Ask anything about the contract text above. Redline will answer based
+          Ask anything about the contract text above. ReviewIt will answer based
           only on what&apos;s in the document.
         </p>
 

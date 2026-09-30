@@ -34,7 +34,7 @@ import type { Analysis, Answer } from './model-boundary';
  * Q&A Fixture Responses (ADR 0001 — "Citation Integrity")
  *
  * For criterion 6 (Eval): "Q&A groundedness — On questions the document does not
- * answer, share where Redline says so rather than answering anyway. Target ~100%;
+ * answer, share where ReviewIt says so rather than answering anyway. Target ~100%;
  * no fabricated answers."
  *
  * Every answer must be:

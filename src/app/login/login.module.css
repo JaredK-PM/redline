@@ -63,6 +63,17 @@
   border-color: var(--legal-navy-light);
 }
 
+.forgotLink {
+  align-self: flex-end;
+  font-size: 13px;
+  color: var(--legal-gray);
+  margin-top: -6px;
+}
+
+.forgotLink:hover {
+  color: var(--legal-navy);
+}
+
 .toggle {
   margin-top: 22px;
   font-size: 13px;
