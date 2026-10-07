@@ -1,11 +1,35 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import NewReview from "@/app/review/new/page";
+import { createTestBoundary } from "@/lib/fixture-loader";
 
 describe("Walking Skeleton: Paste → Analyze → Result", () => {
   beforeEach(() => {
     // Reset mocks before each test
     vi.clearAllMocks();
+
+    // The page POSTs to /api/analyze; answer it from recorded fixtures instead
+    // of calling OpenRouter.
+    const boundary = createTestBoundary();
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: string, init?: RequestInit) => {
+        const body = JSON.parse(String(init?.body ?? "{}"));
+        try {
+          const analysis = await boundary.analyzeContract(body);
+          return new Response(JSON.stringify(analysis), { status: 200 });
+        } catch {
+          return new Response(
+            JSON.stringify({ error: "No fixture found for this contract" }),
+            { status: 500 }
+          );
+        }
+      })
+    );
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
   });
 
   it("should analyze a pasted contract and display the result screen with flags", async () => {
