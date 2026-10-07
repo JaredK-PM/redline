@@ -9,7 +9,7 @@ independent of and parallel to Auth (01) — neither blocks the other.
 combining several pasted documents into one text. Validate the pasted text is
 non-empty and prepare it as the single `documentText` string every downstream
 seam (`analyzeContract()`, `answerFromDocument()`) consumes. Display the
-standing notice that Redline reads only the text it's given, not attachments
+standing notice that ReviewIt reads only the text it's given, not attachments
 or documents referenced but not pasted. No analysis runs here — this ticket
 only gets text ready to be analyzed.
 

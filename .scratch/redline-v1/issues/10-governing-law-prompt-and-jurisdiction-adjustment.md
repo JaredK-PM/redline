@@ -20,7 +20,7 @@ as its own Note naming the applicable state.
 - [ ] Running with `governingLawState` or `operatingState` as `unknown`
       produces the "depends on governing law" marker instead of a severity
 - [ ] A `non-us` `governingLawState` marks all jurisdiction-sensitive flags
-      uncertain and tells the signer Redline cannot assess it
+      uncertain and tells the signer ReviewIt cannot assess it
 - [ ] "Governing law" itself appears as a Note naming the state whose rules
       apply
 - [ ] The adjustment table carries a last-reviewed date

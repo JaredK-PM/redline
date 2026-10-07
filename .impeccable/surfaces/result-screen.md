@@ -7,7 +7,7 @@ related_targets: []
 
 # Surface: Result screen
 
-**Scope:** Redline's Result screen (`class-projects/Redline_App`) — built for now
+**Scope:** ReviewIt's Result screen (`class-projects/Redline_App`) — built for now
 as a standalone static HTML/CSS comp, not yet wired into the Next.js app
 (scaffolding is blocked on the package-manager decision per `CLAUDE.md`).
 

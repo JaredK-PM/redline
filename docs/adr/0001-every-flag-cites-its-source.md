@@ -4,7 +4,7 @@ Status: Accepted — 2026-08-28
 
 ## Decision
 
-Every risk flag Redline produces carries the exact sentence from the uploaded
+Every risk flag ReviewIt produces carries the exact sentence from the uploaded
 document it is based on, shown verbatim beside the flag. If the pipeline cannot
 attach a real source sentence, the flag is a bug and is withheld — not shown
 unquoted, not shown with an approximate reference.

@@ -64,7 +64,7 @@ describe("Document Intake (Paste)", () => {
     expect(textarea.value).toBe(`${doc1}\n\n---\n\n${doc2}`);
   });
 
-  it("should display the notice about what Redline reads", () => {
+  it("should display the notice about what ReviewIt reads", () => {
     render(<NewReview />);
 
     const notice = screen.getByText(/only the text you paste/i);

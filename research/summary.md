@@ -1,10 +1,10 @@
-# Redline — Research Summary
+# ReviewIt — Research Summary
 
 Synthesis of four parallel research agents (all Sonnet). Source files:
 `agent-1-who-has-this-pain.md`, `agent-2-what-goes-wrong.md`,
 `agent-3-what-already-exists.md`, `agent-4-who-would-pay.md`.
 
-**Hypothesis under test:** Redline reads a contract, lease, freelance agreement, or
+**Hypothesis under test:** ReviewIt reads a contract, lease, freelance agreement, or
 terms of service and tells the reader what they're actually signing — plain-English
 summary, risky clauses ranked by severity with the exact source sentence, a drafted
 counter-offer per clause, and a Q&A box that answers only from the document.
@@ -103,7 +103,7 @@ late-fee/penalty clauses — little dedicated complaint evidence surfaced.
 
 Market splits into **enterprise/law-firm AI** (Spellbook, LegalOn, LawGeex, Robin AI,
 Luminance, Kira, Ironclad) and **consumer/prosumer explainers** (ToS;DR, Detangle.ai,
-Genie AI free tier, DoNotPay, ad hoc ChatGPT/Claude). Redline's hypothesis lives almost
+Genie AI free tier, DoNotPay, ad hoc ChatGPT/Claude). ReviewIt's hypothesis lives almost
 entirely in the second camp, which is sparsely populated and has a credibility problem.
 
 1. **Accuracy / hallucination is the #1 complaint at every tier.** Spellbook "glitches
@@ -113,7 +113,7 @@ entirely in the second camp, which is sparsely populated and has a credibility p
 2. **Enterprise tools are gated behind playbook configuration.** LawGeex, LegalOn,
    Spellbook all require the customer to encode negotiating positions first. A
    consumer/freelancer has no playbook and no time to build one — these tools are
-   *structurally* unavailable to Redline's user even at zero price.
+   *structurally* unavailable to ReviewIt's user even at zero price.
 3. **Opaque, high pricing.** $5K–$100K/year, "contact sales." Even "individual" tiers
    (LegalOn $550/mo, Genie Pro $75/mo) are priced for someone billing clients.
 4. **Summary without action.** Detangle.ai and ToS;DR tell you the deal is bad but
@@ -129,7 +129,7 @@ entirely in the second camp, which is sparsely populated and has a credibility p
    plain-English summary + a "favor scale," but has almost no independent review
    footprint (no G2/Capterra/Trustpilot) — users have little basis for trust.
 
-**Whitespace:** No single tool bundles all four of Redline's pillars for a non-lawyer.
+**Whitespace:** No single tool bundles all four of ReviewIt's pillars for a non-lawyer.
 Document-grounded Q&A ("answer only from this document") is essentially absent from the
 consumer set and directly attacks the hallucination complaint. "Exact source sentence"
 citation as a trust mechanism is under-used even in enterprise tools.
@@ -164,9 +164,9 @@ State plainly — these are the findings that argue against building it as pitch
 2. **The headline personas have the sharpest pain but the lowest WTP.** Freelancers and
    renters lead on pain and trail on willingness to pay. The segment with real money —
    employees reviewing severance and offer letters ($350–$1,000/doc) — is barely in the
-   original framing. Built around freelancers + leases + ToS, Redline aims at the
+   original framing. Built around freelancers + leases + ToS, ReviewIt aims at the
    people least willing to pay.
-3. **The default competitor is free and already adopted.** ChatGPT/Claude. Redline only
+3. **The default competitor is free and already adopted.** ChatGPT/Claude. ReviewIt only
    wins if it is visibly better on the exact axis those fail: hallucination/trust. The
    source-sentence citation and answer-only-from-the-document Q&A are the *entire*
    wedge — not nice-to-haves.
@@ -176,7 +176,7 @@ State plainly — these are the findings that argue against building it as pitch
    carries regulatory exposure. Framing ("tells you what you're signing," not "legal
    advice"), disclaimers, and scope limits are product requirements, not footnotes.
 5. **A close analog already ships cheap.** Detangle.ai does plain-English summary +
-   favor score for consumers at $19–$199/doc. Redline's differentiation (ranked clauses
+   favor score for consumers at $19–$199/doc. ReviewIt's differentiation (ranked clauses
    with source sentence + counter-offers + doc-grounded Q&A) is real, but it's a
    feature delta over an existing product, not a greenfield market.
 6. **The pain evidence has a hole.** Reddit — where the richest first-person testimony

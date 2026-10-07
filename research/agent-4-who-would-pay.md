@@ -2,7 +2,7 @@
 
 Scope: segments feeling contract-review pain most sharply, and any evidence on willingness to pay (WTP).
 
-Sourcing caveat: several dollar figures below come from law-firm marketing pages and legal-marketplace SEO content (ContractsCounsel, My Legal Pal, Inkvex, Upcounsel, contractclarifyai) surfaced via web search, not from primary survey instruments. Freelancer non-payment stats trace to Freelancers Union / Upwork and Authors Guild surveys. Treat marketplace "average flat fee" numbers as directional. I was not able to pull first-person Reddit threads with a specific stated price for an app like Redline — see "What I could not find."
+Sourcing caveat: several dollar figures below come from law-firm marketing pages and legal-marketplace SEO content (ContractsCounsel, My Legal Pal, Inkvex, Upcounsel, contractclarifyai) surfaced via web search, not from primary survey instruments. Freelancer non-payment stats trace to Freelancers Union / Upwork and Authors Guild surveys. Treat marketplace "average flat fee" numbers as directional. I was not able to pull first-person Reddit threads with a specific stated price for an app like ReviewIt — see "What I could not find."
 
 ## Segments, ranked by intensity of pain
 
@@ -77,7 +77,7 @@ DIY / online legal service pricing (consumer reference anchors):
   - https://ailawyer.pro/blog/rocket-lawyer-vs-legalzoom
   - https://www.forbes.com/advisor/business/rocketlawyer-vs-legalzoom/
 
-AI / low-cost contract-review tools (closest direct comps to Redline, i.e. what the market currently charges for "plain-English + risky clauses"):
+AI / low-cost contract-review tools (closest direct comps to ReviewIt, i.e. what the market currently charges for "plain-English + risky clauses"):
 - ContractClarifyAI: $9 one-time up to $29/month; free tier. Plain-English clause explanations + negotiation guidance.
 - Pact: free tier; $7.99/week or $49.99/year for unlimited reviews; risk analysis in <60 seconds.
 - QwickContractReview: $99 flat per review, plain-English summary + risk detection, 24–48 hr turnaround.
@@ -99,7 +99,7 @@ AI / low-cost contract-review tools (closest direct comps to Redline, i.e. what 
 
 ## What I could not find
 
-- No first-person Reddit / forum quotes stating a specific price someone would pay for a Redline-style app. Searches returned vendor pages and SEO content instead of threads; I did not browse Reddit directly.
+- No first-person Reddit / forum quotes stating a specific price someone would pay for a ReviewIt-style app. Searches returned vendor pages and SEO content instead of threads; I did not browse Reddit directly.
 - No hard survey figure for the share of freelancers or small businesses that skipped a lawyer specifically because of cost (the full Freelancers Union "Costs of Nonpayment" report PDF was not accessed; the blog summary omits contract/litigation/legal-cost breakdowns).
 - No willingness-to-pay data specific to startup founders for vendor/customer contract review (only general small-business attorney rates).
 - No evidence that anyone pays to have a Terms of Service reviewed — no pricing, no marketplace data. This use case appears to have ~$0 established WTP even though it's in the product hypothesis.

@@ -6,7 +6,7 @@ import type { ModelBoundary, Answer } from '@/lib/model-boundary';
 /**
  * Q&A Module Tests (Criterion 6 from PRD § "What good looks like")
  *
- * Q&A groundedness — On questions the document does not answer, share where Redline
+ * Q&A groundedness — On questions the document does not answer, share where ReviewIt
  * says so rather than answering anyway. Target ~100%; no fabricated answers.
  *
  * These tests verify that:

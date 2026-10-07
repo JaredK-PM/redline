@@ -3,10 +3,10 @@
 **Status:** open — v2, explicitly deferred past the v1 build
 
 **What to build:** During the 2026-09-11 Impeccable surface-scope direction
-round for Redline's landing page, three structurally distinct candidates
+round for ReviewIt's landing page, three structurally distinct candidates
 were designed against the same established Gate Board world: **Before/After
 Contrast** (chosen for v1 — the same clause shown as ordinary prose, then as
-a Redline flag), **Live Demo Hero** (the reranking board itself as the full
+a ReviewIt flag), **Live Demo Hero** (the reranking board itself as the full
 viewport, no intro copy), and **Boarding Pass First** (the check-in ticket
 alone, board revealed after). A fourth, competitive challenger — **The
 Timetable Rack** (severity ranked by weight/case/rule instead of only color)

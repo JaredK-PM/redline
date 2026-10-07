@@ -7,7 +7,7 @@ related_targets: []
 
 # Surface: Landing page
 
-**Scope:** Redline's public landing page (`class-projects/Redline_App`) —
+**Scope:** ReviewIt's public landing page (`class-projects/Redline_App`) —
 built directly into the real Next.js app at `src/app/page.tsx`, replacing the
 `create-next-app` starter homepage. Unlike the Result screen, scaffolding is
 no longer blocked (npm decided, ticket 00 done), so this is real production
@@ -19,7 +19,7 @@ code from the start, not a standalone comp.
 a user — deciding in seconds whether this is worth pasting a real contract
 into.
 
-**Action / task:** understand what Redline does and for whom, see the
+**Action / task:** understand what ReviewIt does and for whom, see the
 mechanism actually work on a contract, and take the one action (start a
 review).
 

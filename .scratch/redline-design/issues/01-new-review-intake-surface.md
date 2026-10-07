@@ -3,7 +3,7 @@
 **Status:** open
 
 **What:** Build the New Review intake screen — the second surface requested
-from `/impeccable "Design two surfaces for Redline and build one of them."`
+from `/impeccable "Design two surfaces for ReviewIt and build one of them."`
 (the first, the Result screen, is done: `design-comps/result-screen.html`,
 shipped via a full direction round + two finish-review cycles, disposition
 ship). DESIGN.md and `.impeccable/design.json` now exist, so per Impeccable's

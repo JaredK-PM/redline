@@ -4,7 +4,7 @@ Status: Accepted — 2026-08-28
 
 ## Decision
 
-Redline v1 is for **small-business owners and founders** who review inbound
+ReviewIt v1 is for **small-business owners and founders** who review inbound
 vendor, customer, and contractor contracts (MSAs, SOWs, NDAs, SaaS terms) as a
 recurring part of running the business. It analyses a contract **before it is
 signed**: the question it answers is "should I sign this, and what do I push

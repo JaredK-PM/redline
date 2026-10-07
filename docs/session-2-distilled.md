@@ -2,7 +2,7 @@
 
 The student handbook is an execution script: every command, in run order. This doc pulls
 the *shape* out of it — what each step is for, what it produces, and why it's done that
-way — written so it transfers to any build, not just Redline. The Redline handbook is the
+way — written so it transfers to any build, not just ReviewIt. The ReviewIt handbook is the
 worked example in the right-hand column.
 
 ---
@@ -29,14 +29,14 @@ one custom skill) + a brief (`PRD.md` with a testable "what good looks like") + 
 
 ## The skeleton — the generalized flow
 
-Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
+Eight steps. Each is **Goal / Produces / Why**, then the ReviewIt instance.
 
 ### 0 — Verify the tooling before you depend on it
 - **Goal:** know your environment actually works before anything rides on it.
 - **Produces:** nothing but confidence (and an early cry for help if it's broken).
 - **Why:** a tool that fails halfway through a build costs you the build. Failing on
   minute one, while there's still time and people around to fix it, costs you nothing.
-- **Redline:** run `claude`, confirm it starts and you're logged in, `/exit`. If it
+- **ReviewIt:** run `claude`, confirm it starts and you're logged in, `/exit`. If it
   doesn't start, post in the thread immediately instead of waiting.
 
 ### 1 — Launch bounded, sourced research agents in parallel
@@ -54,7 +54,7 @@ Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
     state — so nothing contaminates anything else and you can run them at once.
   - **Parallel fits the time box.** Four agents at once finish inside the session; one at
     a time is the fallback when the parallel run stalls.
-- **Redline:** four agents on Sonnet — who has this pain / what clause types burn people /
+- **ReviewIt:** four agents on Sonnet — who has this pain / what clause types burn people /
   what already exists / who would pay — then `research/summary.md`, ending with "anything
   that contradicts my hypothesis; if the evidence doesn't support building this, say so."
 
@@ -69,7 +69,7 @@ Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
     has to be rotated — you don't get to un-push it.
   - You eyeball the file list before committing so nothing sensitive slips in. If a push
     is rejected, you hand the exact error to the agent rather than fixing it by hand.
-- **Redline:** `gh` CLI installed and `gh auth login` run *by you* (it asks interactive
+- **ReviewIt:** `gh` CLI installed and `gh auth login` run *by you* (it asks interactive
   questions the agent can't answer). Then the agent writes `.gitignore`, shows the file
   list, commits, and runs `gh repo create redline --public --source=. --push`.
 
@@ -91,7 +91,7 @@ Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
     whole file.
   - After the draft, you *cut* two or three more lines. "The cutting is the part that
     matters and it is the part everyone skips."
-- **Redline:** a 60-line-max `CLAUDE.md` — settled stack, scope with explicit exclusions
+- **ReviewIt:** a 60-line-max `CLAUDE.md` — settled stack, scope with explicit exclusions
   (payments, billing, OCR, sharing), rules like "state only what the document says," and
   pointers to `research/summary.md` and `PRD.md`.
 
@@ -104,12 +104,12 @@ Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
     anyone on the project. Machine-local auto-memory does none of that. Anything the
     *project* must remember goes in the repo.
   - **The Consequences section does the work.** One decision, followed honestly, rules out
-    several others. Redline's "every flag cites its exact source sentence" also rules out
+    several others. ReviewIt's "every flag cites its exact source sentence" also rules out
     scanned documents, paraphrased summaries, and any model careless about copying text
     back — three product decisions out of one.
   - **Why** is written as what a reader of the output can go and verify for themselves —
     not as a preference.
-- **Redline:** `0001-every-flag-cites-its-source.md`, including "let the model describe
+- **ReviewIt:** `0001-every-flag-cites-its-source.md`, including "let the model describe
   risks in its own words" as the rejected alternative.
 
 ### 5 — Adopt shared tooling only when you need it, then configure to a common baseline
@@ -126,7 +126,7 @@ Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
     changed. The message is the only place you get to say why." Imperative summary line,
     no full stop, blank line, then the why — legible to you in six weeks with the session
     forgotten.
-- **Redline:** install `mattpocock-skills` and `skill-creator`; run the setup
+- **ReviewIt:** install `mattpocock-skills` and `skill-creator`; run the setup
   conversation answering "Local markdown / keep default labels / accept"; commit with the
   supplied why-focused message.
 
@@ -149,7 +149,7 @@ Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
     where it fires when it shouldn't and where it fails to fire when it should. "A skill
     that does the right thing at the wrong moment is worse than no skill, because you stop
     trusting it."
-- **Redline:** build `/flush` — reads the conversation at session end and files whatever
+- **ReviewIt:** build `/flush` — reads the conversation at session end and files whatever
   is durable into the repo; proposes `CLAUDE.md` changes rather than making them; never
   writes a credential; writes nothing when nothing durable happened.
 
@@ -170,7 +170,7 @@ Eight steps. Each is **Goal / Produces / Why**, then the Redline instance.
   - **"What good looks like" is the most important section you write** — stated
     specifically enough that someone else could test against it, because the eval suite in
     Session 5 is built directly from it.
-- **Redline:** `grill-with-docs` over `summary.md` + `CLAUDE.md` + ADR 0001 — three rounds,
+- **ReviewIt:** `grill-with-docs` over `summary.md` + `CLAUDE.md` + ADR 0001 — three rounds,
   ten questions, each with a recommended answer — then write `PRD.md` with sections for
   who it's for, the problem (with a sourced quote), the numbered first version, what good
   looks like, the red lines, the calls made and what was given up, what's excluded, and
@@ -221,7 +221,7 @@ The rules worth carrying to every build, stated once and project-agnostic.
 
 ## Applying this to any build
 
-| Redline artifact | The general thing it is |
+| ReviewIt artifact | The general thing it is |
 |---|---|
 | Four research agents + `summary.md` | bounded, sourced evidence gathering before committing to a solution |
 | `redline` git repo + GitHub push | the reversibility guarantee that lets an agent build unattended |

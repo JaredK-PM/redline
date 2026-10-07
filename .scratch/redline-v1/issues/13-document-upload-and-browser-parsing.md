@@ -4,7 +4,7 @@
 browser — the file itself is never sent to the server or stored. Show the
 signer the extracted text before analysis runs so they can confirm or fix it.
 Support pasting several related documents together as one text. Display the
-standing notice that Redline reads only the text it's given, not attachments
+standing notice that ReviewIt reads only the text it's given, not attachments
 or documents referenced but not pasted.
 
 **Blocked by:** 03

@@ -1,7 +1,7 @@
 # 17: Trust copy & edge cases
 
 **What to build:** Add the standing not-legal-advice disclaimer, and a
-reminder at the point a clean verdict is shown that Redline read only what was
+reminder at the point a clean verdict is shown that ReviewIt read only what was
 pasted (not a full multi-document deal). Handle the edge cases: pasted text
 too short or clearly not a contract (clear error, no wasted analysis run), a
 mid-analysis model failure (clear retry message, no blank/partial result), and

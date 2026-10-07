@@ -1,4 +1,4 @@
-# Redline v1 — Specification
+# ReviewIt v1 — Specification
 
 Status: ready-for-agent
 Created: 2026-08-31
@@ -21,7 +21,7 @@ before, the anxiety is worse and the guesswork is the same.
 
 ## Solution
 
-The signer pastes the contract text into Redline, answers two short questions
+The signer pastes the contract text into ReviewIt, answers two short questions
 about governing law, and gets back, in one screen:
 
 - a plain-English summary of what the contract is and what they are agreeing to;
@@ -34,10 +34,10 @@ about governing law, and gets back, in one screen:
 
 The signer keeps an editable list of their own red lines (e.g. "no personal
 guarantee") that feeds every analysis, and a library of their past reviews. If
-the contract is genuinely fine — most are — Redline says so plainly instead of
+the contract is genuinely fine — most are — ReviewIt says so plainly instead of
 inventing problems.
 
-Redline is trusted without a lawyer because every claim it makes points at a
+ReviewIt is trusted without a lawyer because every claim it makes points at a
 sentence the signer can read for themselves.
 
 ## User Stories
@@ -59,12 +59,12 @@ sentence the signer can read for themselves.
    browser, so that I skip copy-paste and the file itself never leaves my machine.
 6. As a signer, I want to see the extracted text before analysis runs, so that I
    can confirm it came through cleanly and fix it if not.
-7. As a signer, I want to be told plainly that Redline reads only the text I give
+7. As a signer, I want to be told plainly that ReviewIt reads only the text I give
    it, so that I understand a clean result does not cover attachments or
    documents referenced but not pasted.
 8. As a signer, I want to include several related documents by pasting them
    together as one text, so that the review covers the whole deal I can see —
-   knowing Redline will not go and fetch documents I did not provide.
+   knowing ReviewIt will not go and fetch documents I did not provide.
 
 **Governing-law prompt**
 
@@ -76,8 +76,8 @@ sentence the signer can read for themselves.
 11. As a signer, I want to answer "I don't know" for either state, so that I am
     not forced to guess — understanding jurisdiction-sensitive flags will then be
     marked "depends on governing law" instead of given a severity.
-12. As a signer, I want Redline to tell me if the contract is governed by non-US
-    law, so that I know Redline cannot assess it and the jurisdiction-sensitive
+12. As a signer, I want ReviewIt to tell me if the contract is governed by non-US
+    law, so that I know ReviewIt cannot assess it and the jurisdiction-sensitive
     flags are all marked uncertain.
 13. As a signer, I want the governing-law clause itself surfaced as a Note, so
     that I know which state's rules I am accepting for everything else.
@@ -118,11 +118,11 @@ sentence the signer can read for themselves.
 **Flags — source sentence**
 
 25. As a signer, I want every flag to show the exact sentence from my contract it
-    is based on, word for word, so that I can verify Redline's reading myself.
+    is based on, word for word, so that I can verify ReviewIt's reading myself.
 26. As a signer, I want to expand a flag and see that sentence in the context of
     the surrounding text, so that I can check nothing was taken out of context.
 27. As a signer, I want to trust that if a flag is shown, its source sentence is
-    real and unaltered, so that I never have to wonder whether Redline made it up.
+    real and unaltered, so that I never have to wonder whether ReviewIt made it up.
 
 **Flags — severity**
 
@@ -145,7 +145,7 @@ sentence the signer can read for themselves.
     merely unusual.
 33. As a signer, I want "this is also broader than a typical version of this
     clause" shown as a note on a flag that already qualifies, not as a flag on
-    its own, so that Redline is not guessing at market norms.
+    its own, so that ReviewIt is not guessing at market norms.
 
 **Counter-offers**
 
@@ -163,26 +163,26 @@ sentence the signer can read for themselves.
 
 38. As a signer, I want what a clause *says* stated plainly and never hedged, so
     that I can rely on the factual part.
-39. As a signer, I want Redline's judgment about a clause (how bad, whether it is
+39. As a signer, I want ReviewIt's judgment about a clause (how bad, whether it is
     unusual) marked as a judgment with a confidence signal, so that I know what
     is fact and what is interpretation.
 40. As a signer, I want a real "unclear — have someone look at this" state on
-    individual clauses, so that Redline admits when it genuinely cannot tell
+    individual clauses, so that ReviewIt admits when it genuinely cannot tell
     rather than bluffing.
 
 **Clean verdict**
 
-41. As a signer, I want Redline to tell me directly when nothing in the contract
+41. As a signer, I want ReviewIt to tell me directly when nothing in the contract
     reaches Blocker or Push, so that a clean contract produces a clear "you are
     probably fine" rather than a padded list.
 42. As a signer, I want the clean result to still show any Notes and let me ask
     questions, so that "clean" does not mean "nothing to see".
-43. As a signer, I want to trust that Redline will not manufacture problems to
+43. As a signer, I want to trust that ReviewIt will not manufacture problems to
     seem useful, so that the flags it does raise carry weight.
 
 **Also seen**
 
-44. As a signer, I want clauses outside Redline's core set that it still noticed
+44. As a signer, I want clauses outside ReviewIt's core set that it still noticed
     surfaced separately at lower confidence, so that I get the benefit of a wider
     read without diluting the main flags.
 
@@ -192,7 +192,7 @@ sentence the signer can read for themselves.
     can check specifics the summary and flags did not cover.
 46. As a signer, I want answers drawn only from the contract text, so that I am
     not getting the model's general opinions mixed in.
-47. As a signer, I want Redline to say "the document does not address that" when
+47. As a signer, I want ReviewIt to say "the document does not address that" when
     it does not, so that silence is not filled with a guess.
 48. As a signer, I want answers to point at the relevant part of the text where
     possible, so that I can verify them the way I verify flags.
@@ -217,9 +217,9 @@ sentence the signer can read for themselves.
 
 **Trust**
 
-56. As a signer, I want a clear statement that Redline is not legal advice and
+56. As a signer, I want a clear statement that ReviewIt is not legal advice and
     not a lawyer, so that I understand its limits.
-57. As a signer, I want to be reminded that Redline read only what I pasted, at
+57. As a signer, I want to be reminded that ReviewIt read only what I pasted, at
     the point where a clean verdict is shown, so that I do not over-trust it on a
     multi-document deal.
 

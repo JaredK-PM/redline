@@ -1,6 +1,6 @@
 # Agent 3 — What Already Exists
 
-Scope note: The contract-review market splits cleanly into two camps. (1) Enterprise / law-firm / in-house legal AI (Spellbook, LegalOn, LawGeex, Robin AI, Luminance, Kira, Ironclad, ContractPodAi, Lexion, Loio, ClauseBuddy) — priced per-seat in the thousands-to-tens-of-thousands per year, built around "playbooks" the customer configures, sold to people who already know contract law. (2) Consumer / prosumer explainers (ToS;DR, Detangle.ai, Genie AI free tier, DoNotPay, ad hoc ChatGPT/Claude) — cheap or free, aimed at non-lawyers, far thinner on the "ranked risky clauses + drafted counter-offer + doc-grounded Q&A" combination Redline proposes. Redline's hypothesis lives almost entirely in camp 2, which is sparsely populated and has a credibility problem (DoNotPay).
+Scope note: The contract-review market splits cleanly into two camps. (1) Enterprise / law-firm / in-house legal AI (Spellbook, LegalOn, LawGeex, Robin AI, Luminance, Kira, Ironclad, ContractPodAi, Lexion, Loio, ClauseBuddy) — priced per-seat in the thousands-to-tens-of-thousands per year, built around "playbooks" the customer configures, sold to people who already know contract law. (2) Consumer / prosumer explainers (ToS;DR, Detangle.ai, Genie AI free tier, DoNotPay, ad hoc ChatGPT/Claude) — cheap or free, aimed at non-lawyers, far thinner on the "ranked risky clauses + drafted counter-offer + doc-grounded Q&A" combination ReviewIt proposes. ReviewIt's hypothesis lives almost entirely in camp 2, which is sparsely populated and has a credibility problem (DoNotPay).
 
 ## Products
 
@@ -34,13 +34,13 @@ Scope note: The contract-review market splits cleanly into two camps. (1) Enterp
 
 ### Genie AI
 - **What it does:** AI legal assistant for drafting, reviewing, and negotiating contracts; 500+ templates, docx editor, PDF import, AI Q&A, and a "risk review" document that flags loopholes and suggests stronger clause wording. Has a genuinely usable free tier.
-- **Who it targets:** Individuals, founders, and small teams without in-house legal — closest of the paid tools to Redline's target. Also sells up to enterprise.
+- **Who it targets:** Individuals, founders, and small teams without in-house legal — closest of the paid tools to ReviewIt's target. Also sells up to enterprise.
 - **Pricing:** Free plan $0/mo (full AI Document Toolkit, Q&A, review/editing, 500+ templates, no card required). Pro $75/mo (unlimited docs, 1M AI tokens, multi-doc "Legal Brain," playbooks). Enterprise from $600/mo.
 - **Most common complaint:** From reviews — "a little costly for startups to afford" and "free trials are severely limited" once you move past the base free toolkit; some reviewers want more depth. (Source: Trustpilot / G2 / Capterra review summaries)
 - **Source URL(s):** https://www.genieai.co/pricing ; https://www.trustpilot.com/review/genieai.co ; https://www.g2.com/products/genieai/reviews ; https://www.capterra.com/p/10003121/Genie-AI/reviews/
 
 ### Detangle.ai
-- **What it does:** AI that produces a 1–2 paragraph plain-English summary of any legal document, plus a "Favor Scale" showing which party the agreement favors, and highlights of important clauses / potential issues. Explicitly a comprehension aid, not advice. This is the single closest analog to Redline's "tell me what I'm signing" core — but it stops at summary + favor score; no ranked-by-severity clause list with source sentence, no drafted counter-offers, no document-grounded Q&A box.
+- **What it does:** AI that produces a 1–2 paragraph plain-English summary of any legal document, plus a "Favor Scale" showing which party the agreement favors, and highlights of important clauses / potential issues. Explicitly a comprehension aid, not advice. This is the single closest analog to ReviewIt's "tell me what I'm signing" core — but it stops at summary + favor score; no ranked-by-severity clause list with source sentence, no drafted counter-offers, no document-grounded Q&A box.
 - **Who it targets:** Individuals / non-lawyers — job seekers reviewing an employment contract, consumers reviewing terms, small business. Explicitly consumer-facing.
 - **Pricing:** Pay-per-document, no subscription: roughly $19–$199 per document depending on document length; all features included at every tier. (Source: AI Review Guys review; not confirmed on Detangle's own site — see "What I could not find.")
 - **Most common complaint:** Reviewers stress it "doesn't replace legal advice entirely" and that unclear or incomplete uploaded documents produce inaccurate analysis. Thin independent review corpus overall (no G2/Capterra/Trustpilot presence found) — hard to gauge real user sentiment. (Source: AI Review Guys)
@@ -48,20 +48,20 @@ Scope note: The contract-review market splits cleanly into two camps. (1) Enterp
 
 ### DoNotPay ("robot lawyer")
 - **What it does:** Consumer subscription chatbot marketed to "sue anyone," generate legal documents, cancel subscriptions, fight fees, and — among many features — analyze/handle agreements. Positioned as an AI substitute for a lawyer.
-- **Who it targets:** Consumers. Exactly Redline's demographic — which makes its regulatory history a cautionary tale for any consumer legal-AI product.
+- **Who it targets:** Consumers. Exactly ReviewIt's demographic — which makes its regulatory history a cautionary tale for any consumer legal-AI product.
 - **Pricing:** Consumer subscription historically ~$36 billed every 2 months (~$18/mo equivalent); the FTC matter covers subscribers from 2021–2023.
 - **Most common complaint:** Regulatory, not review-driven: the FTC charged that the "AI lawyer" did not perform like a human lawyer, was never tested against one, and used no attorneys to check accuracy. Finalized Feb 2025 — DoNotPay pays $193,000, is barred from unsubstantiated "AI lawyer" claims, and must notify past subscribers. Separately settled a class action alleging it "is not actually a robot, a lawyer, nor a law firm."
 - **Source URL(s):** https://www.ftc.gov/news-events/news/press-releases/2025/02/ftc-finalizes-order-donotpay-prohibits-deceptive-ai-lawyer-claims-imposes-monetary-relief-requires ; https://www.abajournal.com/news/article/robot-lawyer-website-donotpay-settles-ftc-claims-it-couldnt-deliver-on-promises
 
 ### Terms of Service; Didn't Read (ToS;DR — tosdr.org)
 - **What it does:** Community/volunteer project that reads the Terms of Service and privacy policies of major websites and grades them A (best) to E (worst), with plain-language "points" tagged positive / negative / blocker / neutral. Delivered via website and a browser extension (Chrome, Edge, Safari, Firefox, Opera) that shows the grade in the toolbar and warns on first visit to a badly rated site. Free and open source.
-- **Who it targets:** Consumers / general web users. Adjacent to Redline's "what am I agreeing to" promise, but only for a fixed catalog of well-known online services — not arbitrary contracts, leases, or freelance agreements a user uploads.
+- **Who it targets:** Consumers / general web users. Adjacent to ReviewIt's "what am I agreeing to" promise, but only for a fixed catalog of well-known online services — not arbitrary contracts, leases, or freelance agreements a user uploads.
 - **Pricing:** Free (donation-funded, volunteer-curated).
 - **Most common complaint:** Structural, not a review complaint: coverage is limited to services volunteers have curated, ratings can lag current terms, and many sites show no rating at all. No per-document / upload-your-own capability. (Source: Wikipedia overview; GitHub project)
 - **Source URL(s):** https://en.wikipedia.org/wiki/Terms_of_Service;_Didn%27t_Read ; https://github.com/tosdr/browser-extensions ; https://tosdr.org
 
 ### Ad hoc ChatGPT / Claude (general-purpose LLM, no legal wrapper)
-- **What it does:** Users paste or upload a contract/lease/TOS and ask for a summary, risk flags, or negotiation points. This is the de facto default tool for Redline's target user today and the real competitor to beat — zero cost, already in hand.
+- **What it does:** Users paste or upload a contract/lease/TOS and ask for a summary, risk flags, or negotiation points. This is the de facto default tool for ReviewIt's target user today and the real competitor to beat — zero cost, already in hand.
 - **Who it targets:** Everyone; disproportionately freelancers and consumers who will not pay a lawyer.
 - **Pricing:** Free tier, or ~$20/mo for ChatGPT Plus / Claude Pro.
 - **Most common complaint:** (a) Hallucination — confident, plausible, wrong output, not solved by newer models; (b) confidentiality — uploading a client contract to a third-party model can itself breach a confidentiality clause, "a real and immediate concern for freelancers"; (c) no legal playbook / no grounding, so accuracy is unreliable without specialized setup. Consensus in legal-industry commentary: fine for a first-pass read or plain-English summary, not for reliance.
@@ -69,17 +69,17 @@ Scope note: The contract-review market splits cleanly into two camps. (1) Enterp
 
 ## Where the existing tools are weak (patterns across complaints)
 
-1. **Accuracy / hallucination is the #1 complaint at every tier.** Spellbook "glitches and makes mistakes," Robin AI "misunderstands legal phrasing," raw ChatGPT/Claude hallucinate, DoNotPay was penalized by the FTC for it. Nobody has solved "trust the output without a lawyer checking it." Any consumer tool must over-invest in citing the exact source sentence (which Redline's hypothesis does) and in honest confidence signaling.
-2. **The enterprise tools are gated behind playbook configuration.** LawGeex, LegalOn, Spellbook all require the customer to encode their negotiating positions first. A consumer/freelancer has no playbook and no time to build one — so these tools are structurally unavailable to Redline's user even if price were no object.
+1. **Accuracy / hallucination is the #1 complaint at every tier.** Spellbook "glitches and makes mistakes," Robin AI "misunderstands legal phrasing," raw ChatGPT/Claude hallucinate, DoNotPay was penalized by the FTC for it. Nobody has solved "trust the output without a lawyer checking it." Any consumer tool must over-invest in citing the exact source sentence (which ReviewIt's hypothesis does) and in honest confidence signaling.
+2. **The enterprise tools are gated behind playbook configuration.** LawGeex, LegalOn, Spellbook all require the customer to encode their negotiating positions first. A consumer/freelancer has no playbook and no time to build one — so these tools are structurally unavailable to ReviewIt's user even if price were no object.
 3. **Opaque, high pricing.** Spellbook, LawGeex, Robin AI, LegalOn enterprise = "contact sales," real numbers $5K–$100K/year. Even the "individual" options (LegalOn $550/mo, Genie Pro $75/mo) are priced for someone billing clients, not someone signing one lease.
-4. **Multi-document blindness.** LegalOn specifically criticized for not reading MSA + order form + exhibits together. Redline should assume a "contract" is often a bundle.
+4. **Multi-document blindness.** LegalOn specifically criticized for not reading MSA + order form + exhibits together. ReviewIt should assume a "contract" is often a bundle.
 5. **Summary without action.** Detangle.ai and ToS;DR tell you the deal is bad but don't hand you language to fix it. The drafted counter-offer per clause is a genuine gap in the consumer-facing set.
-6. **Credibility / regulatory risk for consumer legal AI.** DoNotPay is the cautionary precedent: overclaiming "replaces a lawyer" invites FTC action. Redline's framing ("tells you what you're signing," not "legal advice") is the safer lane, and disclaimers/scope limits are a product requirement, not a footnote.
+6. **Credibility / regulatory risk for consumer legal AI.** DoNotPay is the cautionary precedent: overclaiming "replaces a lawyer" invites FTC action. ReviewIt's framing ("tells you what you're signing," not "legal advice") is the safer lane, and disclaimers/scope limits are a product requirement, not a footnote.
 7. **Thin, un-vetted consumer options.** The genuinely consumer-priced tools (Detangle.ai) have almost no independent review footprint — no G2/Capterra/Trustpilot presence — so users have little basis for trust.
 
-## Whitespace relevant to Redline's hypothesis (consumer/freelancer-facing, cheap, explain-what-I'm-signing)
+## Whitespace relevant to ReviewIt's hypothesis (consumer/freelancer-facing, cheap, explain-what-I'm-signing)
 
-- **No single tool bundles all four of Redline's pillars for a non-lawyer:** (1) plain-English summary, (2) risky clauses ranked by severity *with the exact source sentence*, (3) a drafted counter-offer per clause, (4) a Q&A box answering only from the document. Detangle.ai does ~1 and part of 2. Genie AI's risk-review does part of 2 and 3 but is priced/positioned for founders. ToS;DR does a fixed-catalog version of 1. The combination is open.
+- **No single tool bundles all four of ReviewIt's pillars for a non-lawyer:** (1) plain-English summary, (2) risky clauses ranked by severity *with the exact source sentence*, (3) a drafted counter-offer per clause, (4) a Q&A box answering only from the document. Detangle.ai does ~1 and part of 2. Genie AI's risk-review does part of 2 and 3 but is priced/positioned for founders. ToS;DR does a fixed-catalog version of 1. The combination is open.
 - **Price point is unoccupied.** Between "free but generic/unreliable" (ChatGPT) and "$75–$550/mo" (Genie Pro, LegalOn Individual) there is room for a per-document or low monthly consumer price (Detangle's $19–$199/doc is the only comparable, and it's barely marketed).
 - **Document-grounded Q&A ("answer only from this document") is essentially absent** from the consumer-facing set and directly attacks the hallucination complaint that plagues every incumbent.
 - **"Exact source sentence" citation as a trust mechanism** is under-used even in enterprise tools and would be a differentiator for a skeptical consumer audience.

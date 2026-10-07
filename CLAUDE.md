@@ -70,7 +70,7 @@ worthless when the text it points at was misread.
 ## Repo note
 
 This folder is its own git repo (remote: `JaredK-PM/redline`) nested inside the
-`job-search-os` tree. Never stage or commit Redline files into the parent repo.
+`job-search-os` tree. Never stage or commit ReviewIt files into the parent repo.
 
 ## Architecture & Learning
 

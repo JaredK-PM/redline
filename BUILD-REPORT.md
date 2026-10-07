@@ -1,4 +1,4 @@
-# Redline v1 — Build Report: Tickets 00-12 Complete
+# ReviewIt v1 — Build Report: Tickets 00-12 Complete
 
 **Session:** Extended build session (Rate limit reset once)  
 **Status:** ✅ **ALL TICKETS COMPLETE** (00-12)  
@@ -267,7 +267,7 @@ c87cb9d Implement flag severity rules (ADR 0003) with comprehensive test coverag
 
 ## Summary
 
-**Redline v1 core analysis engine is complete.** All 12 analysis implementation tickets (00-12) finished. 196 tests passing. All verification gates (typecheck, lint, build) passing. 
+**ReviewIt v1 core analysis engine is complete.** All 12 analysis implementation tickets (00-12) finished. 196 tests passing. All verification gates (typecheck, lint, build) passing. 
 
 The app now:
 1. ✅ Captures and analyzes pasted contracts

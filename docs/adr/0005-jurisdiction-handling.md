@@ -4,7 +4,7 @@ Status: Accepted — 2026-08-31
 
 ## Decision
 
-Redline asks the signer two questions before analysis:
+ReviewIt asks the signer two questions before analysis:
 
 1. Which state's law governs the contract (from the governing-law clause, or the
    signer's best knowledge).
@@ -21,10 +21,10 @@ plainly, which state's rules the signer is accepting for everything else in the
 contract.
 
 If either state is unknown, the jurisdiction-sensitive flags are marked "depends
-on governing law" and given no fixed severity, rather than Redline asserting one.
+on governing law" and given no fixed severity, rather than ReviewIt asserting one.
 
 Scope limit: v1 handles US state law only. A contract governed by non-US law gets
-a single up-front notice that Redline cannot assess it, and analysis proceeds
+a single up-front notice that ReviewIt cannot assess it, and analysis proceeds
 with the jurisdiction-sensitive flags all marked "depends on governing law".
 
 ## Alternatives
@@ -49,7 +49,7 @@ the top of the flow is a small price for not being confidently wrong.
 ## Consequences
 
 - Onboarding gains two required fields before a result is shown.
-- Redline is now making state-law-contingent statements, which sharpens the
+- ReviewIt is now making state-law-contingent statements, which sharpens the
   unauthorised-practice-of-law exposure that the "we only explain what you're
   signing" framing was meant to limit. The brief's risk section owns this.
 - The eval suite needs jurisdiction-labelled fixtures: the same clause under two
