@@ -45,9 +45,11 @@ worthless when the text it points at was misread.
 - This repo is public. Secrets live only in `.env.local` (gitignored). Never commit
   a secret; a pushed key is public the moment it lands and has to be rotated.
 - Ask before adding any dependency.
-- Package manager: **npm**. OpenRouter model slug and Supabase project are still
-  undecided. Do not call the model or run any step that needs Supabase
-  credentials until the human supplies each one.
+- Package manager: **npm**. OpenRouter model (claude-3-haiku) and the Supabase
+  project are both live. Local `.env.local` still holds placeholder Supabase
+  values — real credentials live only in Vercel's environment, so
+  auth-dependent features can't be tested against local dev; test against
+  the deployed app instead.
 - Unattended run: before calling any task done, run typecheck, lint, tests, and a
   production build, and show the output. Not green is not done.
 - Any user-facing prose this repo produces — landing page copy, result-screen
